@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <title>Den gode Hensikt Aksjeklubb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <div class="nav-brand">
+          <span class="brand-icon">&#9651;</span>
+          <span class="brand-name">DGH Aksjeklubb</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#market"   class="nav-link">Marked</a></li>
+          <li><a href="#analysis" class="nav-link">Analyse</a></li>
+          <li><a href="#movers"   class="nav-link">Bevegelser</a></li>
+        </ul>
+        <div class="market-status" id="market-status">
+          <span class="status-dot"></span>
+          <span class="status-label">Sjekker marked…</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="market">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Markedsanalyse · Oslo Børs</p>
+        <h1 class="hero-title">Den gode Hensikt<br /><span class="hero-title-accent">Aksjeklubb</span></h1>
+        <p class="hero-subtitle">Sanntidsdata og analytiske nøkkeltall for de mest sentrale aksjene på Oslo Børs.</p>
+      </div>
+      <div class="hero-ticker">
+        <div class="ticker-track" id="ticker-track">
+          <span class="ticker-loading">Laster kurser…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Indices Bar -->
+    <section class="indices-bar">
+      <div class="indices-inner" id="indices-bar">
+        <div class="index-item skeleton">
+          <span class="index-name">SPY</span>
+          <span class="index-value">—</span>
+          <span class="index-change">—</span>
+        </div>
+        <div class="index-item skeleton">
+          <span class="index-name">QQQ</span>
+          <span class="index-value">—</span>
+          <span class="index-change">—</span>
+        </div>
+        <div class="index-item skeleton">
+          <span class="index-name">GLD</span>
+          <span class="index-value">—</span>
+          <span class="index-change">—</span>
+        </div>
+        <div class="index-item skeleton">
+          <span class="index-name">BNO</span>
+          <span class="index-value">—</span>
+          <span class="index-change">—</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytical Market Table -->
+    <section class="section" id="analysis">
+      <div class="section-inner">
+        <div class="section-header">
+          <div>
+            <p class="section-eyebrow">Oslo Børs · Sanntid</p>
+            <h2 class="section-title">Markedsoversikt</h2>
+          </div>
+          <div class="table-controls">
+            <button class="sort-btn active" data-sort="symbol">Ticker</button>
+            <button class="sort-btn" data-sort="percent_change">Dag %</button>
+            <button class="sort-btn" data-sort="volume">Volum</button>
+            <button class="sort-btn" data-sort="from_high">Fra topp</button>
+          </div>
+        </div>
+
+        <div class="market-table-wrap">
+          <table class="market-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Selskap</th>
+                <th>Sektor</th>
+                <th class="num">Kurs</th>
+                <th class="num">Dag %</th>
+                <th class="num">Volum</th>
+                <th class="num">Rel. vol</th>
+                <th>52-ukers spenn</th>
+                <th class="num">Fra topp</th>
+              </tr>
+            </thead>
+            <tbody id="market-tbody">
+              <tr class="skeleton-row"><td colspan="9">Laster markedsdata…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gainers / Losers -->
+    <section class="section section-alt" id="movers">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="section-eyebrow">Dagens bevegelser</p>
+          <h2 class="section-title">Vinnere &amp; Tapere</h2>
+        </div>
+        <div class="movers-grid">
+          <div class="movers-col">
+            <h3 class="movers-label gainers-label">&#9650; Vinnere</h3>
+            <div id="gainers-list" class="movers-list">
+              <div class="mover-skeleton"></div>
+              <div class="mover-skeleton"></div>
+              <div class="mover-skeleton"></div>
+            </div>
+          </div>
+          <div class="movers-col">
+            <h3 class="movers-label losers-label">&#9660; Tapere</h3>
+            <div id="losers-list" class="movers-list">
+              <div class="mover-skeleton"></div>
+              <div class="mover-skeleton"></div>
+              <div class="mover-skeleton"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-icon">&#9651;</span>
+          <span>Den gode Hensikt Aksjeklubb</span>
+        </div>
+        <p class="footer-disclaimer">Kun til intern bruk. Ikke investeringsrådgivning. Data fra Twelve Data.</p>
+        <p class="footer-copy">&copy; 2026 DGH Aksjeklubb</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html>
