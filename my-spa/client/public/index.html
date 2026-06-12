@@ -11,152 +11,252 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
+    <div class="app-shell">
 
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-inner">
-        <div class="nav-brand">
+      <!-- Sidebar navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
           <span class="brand-icon">&#9651;</span>
-          <span class="brand-name">DGH Aksjeklubb</span>
+          <span class="brand-name">DGHA</span>
         </div>
-        <ul class="nav-links">
-          <li><a href="#market"   class="nav-link">Marked</a></li>
-          <li><a href="#analysis" class="nav-link">Analyse</a></li>
-          <li><a href="#movers"   class="nav-link">Bevegelser</a></li>
-        </ul>
+        <nav class="sidebar-nav">
+          <a href="#/"          class="side-link" data-route="/">DGHA</a>
+          <a href="#/medlemmer" class="side-link" data-route="/medlemmer">Medlemmer</a>
+          <a href="#/vedtekter" class="side-link" data-route="/vedtekter">Vedtekter</a>
+        </nav>
         <div class="market-status" id="market-status">
           <span class="status-dot"></span>
           <span class="status-label">Sjekker marked…</span>
         </div>
-      </div>
-    </nav>
+      </aside>
 
-    <!-- Hero -->
-    <section class="hero" id="market">
-      <div class="hero-content">
-        <p class="hero-eyebrow">Markedsanalyse · Oslo Børs</p>
-        <h1 class="hero-title">Den gode Hensikt<br /><span class="hero-title-accent">Aksjeklubb</span></h1>
-        <p class="hero-subtitle">Sanntidsdata og analytiske nøkkeltall for de mest sentrale aksjene på Oslo Børs.</p>
-      </div>
-      <div class="hero-ticker">
-        <div class="ticker-track" id="ticker-track">
-          <span class="ticker-loading">Laster kurser…</span>
-        </div>
-      </div>
-    </section>
+      <!-- Main content -->
+      <main class="app-main">
 
-    <!-- Global Indices Bar -->
-    <section class="indices-bar">
-      <div class="indices-inner" id="indices-bar">
-        <div class="index-item skeleton">
-          <span class="index-name">SPY</span>
-          <span class="index-value">—</span>
-          <span class="index-change">—</span>
-        </div>
-        <div class="index-item skeleton">
-          <span class="index-name">QQQ</span>
-          <span class="index-value">—</span>
-          <span class="index-change">—</span>
-        </div>
-        <div class="index-item skeleton">
-          <span class="index-name">GLD</span>
-          <span class="index-value">—</span>
-          <span class="index-change">—</span>
-        </div>
-        <div class="index-item skeleton">
-          <span class="index-name">BNO</span>
-          <span class="index-value">—</span>
-          <span class="index-change">—</span>
-        </div>
-      </div>
-    </section>
+        <!-- ═══ Page: DGHA (home) ═══ -->
+        <div class="page" id="page-home" data-route="/">
 
-    <!-- Analytical Market Table -->
-    <section class="section" id="analysis">
-      <div class="section-inner">
-        <div class="section-header">
-          <div>
-            <p class="section-eyebrow">Oslo Børs · Sanntid</p>
-            <h2 class="section-title">Markedsoversikt</h2>
-          </div>
-          <div class="table-controls">
-            <button class="sort-btn active" data-sort="symbol">Ticker</button>
-            <button class="sort-btn" data-sort="percent_change">Dag %</button>
-            <button class="sort-btn" data-sort="volume">Volum</button>
-            <button class="sort-btn" data-sort="from_high">Fra topp</button>
-          </div>
-        </div>
-
-        <div class="market-table-wrap">
-          <table class="market-table">
-            <thead>
-              <tr>
-                <th>Ticker</th>
-                <th>Selskap</th>
-                <th>Sektor</th>
-                <th class="num">Kurs</th>
-                <th class="num">Dag %</th>
-                <th class="num">Volum</th>
-                <th class="num">Rel. vol</th>
-                <th>52-ukers spenn</th>
-                <th class="num">Fra topp</th>
-              </tr>
-            </thead>
-            <tbody id="market-tbody">
-              <tr class="skeleton-row"><td colspan="9">Laster markedsdata…</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="show-more-wrap" id="show-more-wrap" hidden>
-          <button class="show-more-btn" id="show-more-btn">Vis flere</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gainers / Losers -->
-    <section class="section section-alt" id="movers">
-      <div class="section-inner">
-        <div class="section-header">
-          <p class="section-eyebrow">Dagens bevegelser</p>
-          <h2 class="section-title">Vinnere &amp; Tapere</h2>
-        </div>
-        <div class="movers-grid">
-          <div class="movers-col">
-            <h3 class="movers-label gainers-label">&#9650; Vinnere</h3>
-            <div id="gainers-list" class="movers-list">
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
+          <!-- Hero -->
+          <section class="hero" id="market">
+            <div class="hero-content">
+              <p class="hero-eyebrow">Markedsanalyse · Oslo Børs</p>
+              <h1 class="hero-title">Den gode Hensikt<br /><span class="hero-title-accent">Aksjeklubb</span></h1>
+              <p class="hero-subtitle">Sanntidsdata og analytiske nøkkeltall for de mest sentrale aksjene på Oslo Børs.</p>
+              <p class="hero-subtitle">Velkommen til De Høye Herrers selskap.</p>
             </div>
-          </div>
-          <div class="movers-col">
-            <h3 class="movers-label losers-label">&#9660; Tapere</h3>
-            <div id="losers-list" class="movers-list">
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
-              <div class="mover-skeleton"></div>
+            <div class="hero-ticker">
+              <div class="ticker-track" id="ticker-track">
+                <span class="ticker-loading">Laster kurser…</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="brand-icon">&#9651;</span>
-          <span>Den gode Hensikt Aksjeklubb</span>
-        </div>
-        <p class="footer-disclaimer">Kun til intern bruk. Ikke investeringsrådgivning. Data fra Twelve Data.</p>
-        <p class="footer-copy">&copy; 2026 DGH Aksjeklubb</p>
-      </div>
-    </footer>
+          <!-- Global Indices Bar -->
+          <section class="indices-bar">
+            <div class="indices-inner" id="indices-bar">
+              <div class="index-item skeleton">
+                <span class="index-name">SPY</span>
+                <span class="index-value">—</span>
+                <span class="index-change">—</span>
+              </div>
+              <div class="index-item skeleton">
+                <span class="index-name">QQQ</span>
+                <span class="index-value">—</span>
+                <span class="index-change">—</span>
+              </div>
+              <div class="index-item skeleton">
+                <span class="index-name">GLD</span>
+                <span class="index-value">—</span>
+                <span class="index-change">—</span>
+              </div>
+              <div class="index-item skeleton">
+                <span class="index-name">BNO</span>
+                <span class="index-value">—</span>
+                <span class="index-change">—</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Analytical Market Table -->
+          <section class="section" id="analysis">
+            <div class="section-inner">
+              <div class="section-header">
+                <div>
+                  <p class="section-eyebrow">Oslo Børs · Sanntid</p>
+                  <h2 class="section-title">Markedsoversikt</h2>
+                </div>
+                <div class="table-controls">
+                  <button class="sort-btn active" data-sort="symbol">Ticker</button>
+                  <button class="sort-btn" data-sort="percent_change">Dag %</button>
+                  <button class="sort-btn" data-sort="volume">Volum</button>
+                  <button class="sort-btn" data-sort="from_high">Fra topp</button>
+                </div>
+              </div>
+
+              <div class="market-table-wrap">
+                <table class="market-table">
+                  <thead>
+                    <tr>
+                      <th>Ticker</th>
+                      <th>Selskap</th>
+                      <th>Sektor</th>
+                      <th class="num">Kurs</th>
+                      <th class="num">Dag %</th>
+                      <th class="num">Volum</th>
+                      <th class="num">Rel. vol</th>
+                      <th>52-ukers spenn</th>
+                      <th class="num">Fra topp</th>
+                    </tr>
+                  </thead>
+                  <tbody id="market-tbody">
+                    <tr class="skeleton-row"><td colspan="9">Laster markedsdata…</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="show-more-wrap" id="show-more-wrap" hidden>
+                <button class="show-more-btn" id="show-more-btn">Vis flere</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Gainers / Losers -->
+          <section class="section section-alt" id="movers">
+            <div class="section-inner">
+              <div class="section-header">
+                <p class="section-eyebrow">Dagens bevegelser</p>
+                <h2 class="section-title">Vinnere &amp; Tapere</h2>
+              </div>
+              <div class="movers-grid">
+                <div class="movers-col">
+                  <h3 class="movers-label gainers-label">&#9650; Vinnere</h3>
+                  <div id="gainers-list" class="movers-list">
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                  </div>
+                </div>
+                <div class="movers-col">
+                  <h3 class="movers-label losers-label">&#9660; Tapere</h3>
+                  <div id="losers-list" class="movers-list">
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                    <div class="mover-skeleton"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div><!-- /page-home -->
+
+        <!-- ═══ Page: Medlemmer ═══ -->
+        <div class="page" id="page-medlemmer" data-route="/medlemmer" hidden>
+          <section class="section page-section">
+            <div class="section-inner">
+              <div class="section-header">
+                <div>
+                  <p class="section-eyebrow">Den Gode Hensikt Aksjeklubb</p>
+                  <h2 class="section-title">Medlemmer</h2>
+                </div>
+              </div>
+              <p class="page-placeholder">Innhold kommer snart.</p>
+            </div>
+          </section>
+        </div><!-- /page-medlemmer -->
+
+        <!-- ═══ Page: Vedtekter ═══ -->
+        <div class="page" id="page-vedtekter" data-route="/vedtekter" hidden>
+          <section class="section page-section">
+            <div class="section-inner">
+              <div class="section-header">
+                <div>
+                  <p class="section-eyebrow">Den Gode Hensikt Aksjeklubb</p>
+                  <h2 class="section-title">Vedtekter</h2>
+                </div>
+              </div>
+
+              <article class="doc">
+                <section class="doc-section">
+                  <h3 class="doc-heading">Foreningens navn</h3>
+                  <p>Foreningens navn er Den Gode Hensikt Aksjeklubb.</p>
+                </section>
+
+                <section class="doc-section">
+                  <h3 class="doc-heading">Foreningens formål</h3>
+                  <p>Den Gode Hensikt Aksjeklubb (herved omtalt DGHA) søker å bringe den gode hensikt for de ærede medlemmer, der hensikten er bevaring av sosial profil samt hyggelig samvær.</p>
+                  <p>Da sosialt samvær og vennskapelig hygge neppe vil være tilstrekkelig for å samle De Gode Herrer (DGH), bør det foreligge økonomiske insentiver for å sikre fremtidig toleranse av Herrenes selskap.</p>
+                </section>
+
+                <section class="doc-section">
+                  <h3 class="doc-heading">Medlemskap</h3>
+                  <p>Medlemskap i DGHA krever innbetaling av en gitt sum til foreningens investeringsfond. Summen bestemmes av Hovedstyret (HS) og er lik for alle medlemmer.</p>
+
+                  <h4 class="doc-subheading">Nye medlemmer</h4>
+                  <p>Alle nye medlemmer må ved Generalvorsamlingen stemmes inn, beslutningen krever enstemmighet. Nye medlemmer anses umiddelbart som likeverdige Herrer.</p>
+
+                  <h4 class="doc-subheading">Avskjeder</h4>
+                  <p>Dersom et medlem av DGHA ønsker sitt medlemskap annullert, og er helt sikker i sin sak på dette, skal medlemmets andel av betalinger</p>
+                </section>
+
+                <section class="doc-section">
+                  <h3 class="doc-heading">Generalvorsamling</h3>
+                  <p>Hvert år, i nyårets mørkere tider, skal Den Forsamling Samles (DFS) til Generalvorsamlingen for å gjennomgå alle fire kvartal, og deres avkastninger/forventninger, fra det foregående og kommende år.</p>
+                  <p>Generalvorsamlingen initieres ved å utbringe en skål i minne for General Vors Amling, Vorsets Øverste Herre (VØH).</p>
+
+                  <h4 class="doc-subheading">Utnevnelse</h4>
+                  <p>Generalvorsamlingen har mandat, samt plikt, til å utnevne Høye Herres Hovedstyre (HHH) bestående av:</p>
+                  <ul class="doc-list">
+                    <li>Der Herres Beste Hensikt (DHBH)</li>
+                    <li>Der Ivaretager Av Sosial Opphøyelse (DIASO)</li>
+                    <li>Der Forhøyer Av Kapital (DFAK)</li>
+                  </ul>
+                  <p>Utnevnelse av et medlem av DGH til Høye Herres Hovedstyre krever kvalifisert flertall fra DGH.</p>
+                  <p>For hver hele time som passeres uten utnevnelse av et fullstendig HHH, vil svart røyk gå ut av pipen. Dette gjøres i form av opptenning av sigar, sigarett eller liknende blant samtlige av DGH. Generalvorsamlingen kan kun fortsette etter De Svarte Pipes Pause (DSPP).</p>
+                  <p>Ved utnevnelse av et fullstendig HHH vil hvit røyk gå ut av pipen. Dette gjøres i form av åpning av drikke av den musserende typen på flaske, tilbakeholdt av en kork. DGH skal etter beste evne uttrykke sin fornøyelse over det nye HHH samt gleden av DGHs samvær.</p>
+                </section>
+
+                <section class="doc-section">
+                  <h3 class="doc-heading">Høye Herres Hovedstyre</h3>
+                  <p class="doc-empty">Under utarbeidelse.</p>
+                </section>
+
+                <section class="doc-section">
+                  <h3 class="doc-heading">Det Gode Fond</h3>
+                  <p class="doc-empty">Under utarbeidelse.</p>
+                </section>
+
+                <section class="doc-section">
+                  <h3 class="doc-heading">Vedtekter</h3>
+                  <p class="doc-empty">Under utarbeidelse.</p>
+                </section>
+
+                <section class="doc-section">
+                  <h3 class="doc-heading">Oppløsning</h3>
+                  <p class="doc-empty">Under utarbeidelse.</p>
+                </section>
+              </article>
+            </div>
+          </section>
+        </div><!-- /page-vedtekter -->
+
+        <!-- Footer (shared across pages) -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <div class="footer-brand">
+              <span class="brand-icon">&#9651;</span>
+              <span>Den gode Hensikt Aksjeklubb</span>
+            </div>
+            <p class="footer-disclaimer">Kun til intern bruk. Ikke investeringsrådgivning. Data fra Twelve Data.</p>
+            <p class="footer-copy">&copy; 2026 DGH Aksjeklubb</p>
+          </div>
+        </footer>
+
+      </main>
+    </div>
 
     <script type="module" src="/src/index.js"></script>
   </body>
