@@ -181,8 +181,10 @@ function renderMovers() {
   const sorted = sortedQuotes().sort((a, b) =>
     Number(b[1].percent_change) - Number(a[1].percent_change)
   );
-  const gainers = sorted.slice(0, 3);
-  const losers  = [...sorted].reverse().slice(0, 3);
+  // Cap each list at half the quotes so no company appears in both.
+  const n = Math.min(3, Math.floor(sorted.length / 2));
+  const gainers = sorted.slice(0, n);
+  const losers  = sorted.slice(sorted.length - n).reverse();
 
   const gEl = document.getElementById('gainers-list');
   const lEl = document.getElementById('losers-list');
