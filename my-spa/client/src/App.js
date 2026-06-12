@@ -2,12 +2,8 @@ import { fetchQuotes, fetchIndices } from './services/api.js';
 import { connectSocket } from './services/socket.js';
 
 // ─── Static metadata ────────────────────────────────────────────────────────
-const META = {
-  EQNR:  { name: 'Equinor ASA',    sector: 'Energi'    },
-  DNBBY: { name: 'DNB Bank ASA',   sector: 'Finans'    },
-  NHYKF: { name: 'Norsk Hydro ASA',sector: 'Aluminium' },
-  TELNY: { name: 'Telenor ASA',    sector: 'Telekom'   },
-};
+// Company name & sector arrive on each quote from the server (see
+// server/config/symbols.js), so no client-side company map is needed.
 
 const INDEX_LABELS = {
   SPY: 'S&P 500',
@@ -39,9 +35,13 @@ function fmtVol(v) {
 }
 
 // ─── State ───────────────────────────────────────────────────────────────────
-let quotes  = {};   // { EQNR: {…quote…}, … }
+let quotes  = {};   // { 'EQNR.OL': {…quote…}, … }
 let sortKey = 'symbol';
 let sortDir = 1;
+
+// Market table pagination — show PAGE_SIZE rows, reveal PAGE_SIZE more per click.
+const PAGE_SIZE = 10;
+let visibleCount = PAGE_SIZE;
 
 // ─── Market status ───────────────────────────────────────────────────────────
 function setMarketStatus(q) {
@@ -60,7 +60,7 @@ function renderTicker() {
   if (!track || !Object.keys(quotes).length) return;
   const items = Object.entries(quotes).map(([sym, q]) => {
     const { text, cls } = fmtChange(q.percent_change);
-    return `<span class="${cls}">${sym} ${text}</span><span class="sep">&#8212;</span>`;
+    return `<span class="${cls}">${sym.replace('.OL', '')} ${text}</span><span class="sep">&#8212;</span>`;
   }).join('');
   track.innerHTML = items + items;
 }
@@ -127,8 +127,7 @@ function sortedQuotes() {
 }
 
 function buildRows() {
-  return sortedQuotes().map(([sym, q]) => {
-    const meta      = META[sym] || {};
+  return sortedQuotes().slice(0, visibleCount).map(([sym, q]) => {
     const close     = Number(q.close);
     const chg       = fmtChange(q.percent_change);
     const vol       = Number(q.volume);
@@ -139,9 +138,9 @@ function buildRows() {
 
     return `
       <tr class="market-row" data-symbol="${sym}">
-        <td><span class="ticker-badge">${sym}</span></td>
-        <td class="company-name">${meta.name || q.name || sym}</td>
-        <td><span class="sector-tag">${meta.sector || '—'}</span></td>
+        <td><span class="ticker-badge">${sym.replace('.OL', '')}</span></td>
+        <td class="company-name">${q.name || sym}</td>
+        <td><span class="sector-tag">${q.sector || '—'}</span></td>
         <td class="num mono" data-field="price">${fmtPrice(close, q.currency)}</td>
         <td class="num mono ${chg.cls}" data-field="change">${chg.text}</td>
         <td class="num mono">${fmtVol(vol)}</td>
@@ -157,18 +156,32 @@ function renderTable() {
   if (!tbody) return;
   const html = buildRows();
   tbody.innerHTML = html || '<tr class="skeleton-row"><td colspan="9">Ingen data tilgjengelig</td></tr>';
+  updateShowMore();
+}
+
+// Toggle the "Vis flere" button + remaining-count label based on what's shown.
+function updateShowMore() {
+  const wrap = document.getElementById('show-more-wrap');
+  const btn  = document.getElementById('show-more-btn');
+  if (!wrap || !btn) return;
+  const total = sortedQuotes().length;
+  if (visibleCount >= total) {
+    wrap.hidden = true;
+  } else {
+    wrap.hidden = false;
+    btn.textContent = `Vis flere (${Math.min(PAGE_SIZE, total - visibleCount)} av ${total - visibleCount})`;
+  }
 }
 
 // ─── Gainers / Losers ────────────────────────────────────────────────────────
 function moverCard(sym, q, rank) {
-  const meta = META[sym] || {};
   const chg  = fmtChange(q.percent_change);
   return `
     <div class="mover-card">
       <span class="mover-rank">${rank}</span>
       <div class="mover-info">
-        <span class="ticker-badge small">${sym}</span>
-        <span class="mover-name">${meta.name || sym}</span>
+        <span class="ticker-badge small">${sym.replace('.OL', '')}</span>
+        <span class="mover-name">${q.name || sym}</span>
       </div>
       <div class="mover-right">
         <span class="mover-price mono">${fmtPrice(q.close, q.currency)}</span>
@@ -181,8 +194,9 @@ function renderMovers() {
   const sorted = sortedQuotes().sort((a, b) =>
     Number(b[1].percent_change) - Number(a[1].percent_change)
   );
-  // Cap each list at half the quotes so no company appears in both.
-  const n = Math.min(3, Math.floor(sorted.length / 2));
+  // Top 5 gainers / bottom 5 losers. Cap at half the quotes so no company
+  // appears in both list (matters only when fewer than 10 are loaded).
+  const n = Math.min(5, Math.floor(sorted.length / 2));
   const gainers = sorted.slice(0, n);
   const losers  = sorted.slice(sorted.length - n).reverse();
 
@@ -206,34 +220,35 @@ function initSortButtons() {
   });
 }
 
+// "Vis flere" — reveal PAGE_SIZE more rows of the already-fetched 50.
+function initShowMore() {
+  const btn = document.getElementById('show-more-btn');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    visibleCount += PAGE_SIZE;
+    renderTable();
+  });
+}
+
 // ─── Live WebSocket update ───────────────────────────────────────────────────
-function applyPriceEvent(event) {
-  const sym = event.symbol;
-  if (!quotes[sym]) return;
-
-  quotes[sym].close          = event.price;
-  quotes[sym].percent_change = event.percent_change;
-
-  const row = document.querySelector(`.market-row[data-symbol="${sym}"]`);
-  if (row) {
-    const priceEl  = row.querySelector('[data-field="price"]');
-    const changeEl = row.querySelector('[data-field="change"]');
-    const chg      = fmtChange(event.percent_change);
-
-    if (priceEl)  priceEl.textContent  = fmtPrice(event.price, quotes[sym].currency);
-    if (changeEl) { changeEl.textContent = chg.text; changeEl.className = `num mono ${chg.cls}`; }
-
-    row.classList.add('flash');
-    setTimeout(() => row.classList.remove('flash'), 800);
+// Yahoo has no streaming feed, so the server pushes a full snapshot on each
+// refresh: { event: 'snapshot', stocks: {…}, indices: {…} }.
+function applySnapshot(snapshot) {
+  if (snapshot.stocks) {
+    Object.entries(snapshot.stocks).forEach(([sym, q]) => {
+      if (q && q.close) quotes[sym] = q;
+    });
+    renderTable();
+    renderTicker();
+    renderMovers();
   }
-
-  renderTicker();
-  renderMovers();
+  if (snapshot.indices) renderIndices(snapshot.indices);
 }
 
 // ─── Boot ────────────────────────────────────────────────────────────────────
 export default async function App() {
   initSortButtons();
+  initShowMore();
 
   // Retry helper — cache may be warming up on first server start
   async function fetchWithRetry(fn, retries = 3, delayMs = 3000) {
@@ -278,5 +293,5 @@ export default async function App() {
     renderIndices(rawIndices.value);
   }
 
-  connectSocket(applyPriceEvent);
+  connectSocket(applySnapshot);
 }

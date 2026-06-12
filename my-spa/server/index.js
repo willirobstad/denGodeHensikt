@@ -6,7 +6,7 @@ const WebSocket     = require('ws');
 const quoteCache    = require('./services/quoteCache');
 const quotesRouter  = require('./routes/quotes');
 const indicesRouter = require('./routes/indices');
-const { STOCK_SYMBOLS, TWELVE_DATA_WS } = require('./config/twelvedata');
+const { STOCK_SYMBOLS, INDEX_SYMBOLS } = require('./config/symbols');
 
 const app    = express();
 const server = http.createServer(app);
@@ -33,32 +33,18 @@ function broadcast(payload) {
   wss.clients.forEach((c) => { if (c.readyState === WebSocket.OPEN) c.send(msg); });
 }
 
-// --- WebSocket: Twelve Data upstream ---
-function connectTwelveData() {
-  const apiKey = process.env.TWELVE_DATA_API_KEY;
-  const tdWs   = new WebSocket(`${TWELVE_DATA_WS}?apikey=${apiKey}`);
-
-  tdWs.on('open', () => {
-    console.log('Connected to Twelve Data WebSocket');
-    tdWs.send(JSON.stringify({
-      action: 'subscribe',
-      params: { symbols: STOCK_SYMBOLS.join(',') },
-    }));
+// Split the cache into stocks vs. indices and push a snapshot to all clients.
+// Yahoo has no free streaming feed, so liveness comes from this periodic refresh.
+function broadcastSnapshot(cache) {
+  const pick = (syms) => Object.fromEntries(syms.map(s => [s, cache[s]]).filter(([, v]) => v));
+  broadcast({
+    event:   'snapshot',
+    stocks:  pick(STOCK_SYMBOLS),
+    indices: pick(INDEX_SYMBOLS),
   });
-
-  tdWs.on('message', (raw) => {
-    try {
-      const data = JSON.parse(raw.toString());
-      if (data.event === 'price') broadcast(data);
-    } catch (_) {}
-  });
-
-  tdWs.on('error', (err)  => console.error('Twelve Data WS error:', err.message));
-  tdWs.on('close', ()     => { console.warn('Twelve Data WS closed — reconnecting in 5s'); setTimeout(connectTwelveData, 5000); });
 }
 
 // --- Boot ---
-quoteCache.init();
-connectTwelveData();
+quoteCache.init(broadcastSnapshot);
 
 server.listen(PORT, () => console.log(`Server running → http://localhost:${PORT}`));

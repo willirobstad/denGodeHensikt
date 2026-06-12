@@ -1,5 +1,5 @@
 // Open a WebSocket connection to the backend and call onUpdate
-// whenever a live price event arrives from Twelve Data
+// whenever a fresh quote snapshot arrives from the server.
 export function connectSocket(onUpdate) {
   const protocol = location.protocol === 'https:' ? 'wss' : 'ws';
   const ws = new WebSocket(`${protocol}://${location.host}`);
@@ -11,7 +11,7 @@ export function connectSocket(onUpdate) {
   ws.onmessage = (event) => {
     try {
       const data = JSON.parse(event.data);
-      if (data.event === 'price') onUpdate(data);
+      if (data.event === 'snapshot') onUpdate(data);
     } catch (_) {}
   };
 

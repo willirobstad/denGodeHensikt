@@ -1,5 +1,5 @@
 const cache = require('../services/quoteCache');
-const { STOCK_SYMBOLS } = require('../config/twelvedata');
+const { STOCK_SYMBOLS } = require('../config/symbols');
 
 function getQuotes(req, res) {
   if (!cache.isReady()) {

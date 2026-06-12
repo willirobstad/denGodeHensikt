@@ -1,5 +1,5 @@
 const cache = require('../services/quoteCache');
-const { INDEX_SYMBOLS } = require('../config/twelvedata');
+const { INDEX_SYMBOLS } = require('../config/symbols');
 
 function getIndices(req, res) {
   if (!cache.isReady()) {
