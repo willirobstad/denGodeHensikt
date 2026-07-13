@@ -1,14 +1,4 @@
 {
-  "version": 2,
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "client/**"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api"
-    }
-  ]
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "public"
 }

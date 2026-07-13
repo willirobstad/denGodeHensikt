@@ -35,7 +35,7 @@ Serveren kjører på `PORT` fra miljøvariabler, eller port `3000` som standard.
 | `server/services/yahoo.js` | Yahoo-autentisering og normalisering av Yahoo-svar. |
 | `server/services/quoteCache.js` | Felles kursbuffer som oppdateres hvert 25. sekund. |
 | `server/routes/` og `server/controllers/` | REST-endepunkter for aksjer og indekser. |
-| `api/index.js` og `vercel.json` | Vercel-inngang og ruting for den deployerte SPA-en og API-et. |
+| `api/quotes.js`, `api/indices.js`, `scripts/build-vercel.js` og `vercel.json` | Separate Vercel-funksjoner for kurser og bygging av den statiske SPA-en. |
 
 ## Hvordan dataflyten fungerer
 
