@@ -1,9 +1,9 @@
 const cache = require('../services/quoteCache');
 const { INDEX_SYMBOLS } = require('../config/symbols');
 
-function getIndices(req, res) {
-  if (!cache.isReady()) {
-    return res.status(503).json({ error: 'Cache warming up, try again in a few seconds' });
+async function getIndices(req, res) {
+  if (!await cache.ensureFresh()) {
+    return res.status(502).json({ error: 'Could not fetch index data from Yahoo Finance' });
   }
   res.json(cache.getSymbols(INDEX_SYMBOLS));
 }

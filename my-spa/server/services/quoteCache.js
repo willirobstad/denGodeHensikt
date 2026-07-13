@@ -1,42 +1,73 @@
 /**
- * Server-side quote cache.
+ * Quote cache shared by the local server and Vercel Functions.
  *
- * Fetches every tracked symbol from Yahoo Finance in a single batch request on a
- * fixed interval. All API routes read from here so the client always gets an
- * instant response, and each successful refresh is pushed to connected browsers
- * via an injected `onRefresh` callback (used for the live WebSocket snapshot).
+ * Local development refreshes in the background for WebSocket broadcasts.
+ * Serverless requests instead wait for a fresh cache during the request; Vercel
+ * does not guarantee that a timer keeps running after a response is sent.
  */
 const yahoo = require('./yahoo');
 const { ALL_SYMBOLS, META } = require('../config/symbols');
 
-let cache      = null;
-let onRefresh  = null;
+let cache = null;
+let refreshedAt = 0;
+let refreshing = null;
+let onRefresh = null;
+let initialized = false;
 const REFRESH_MS = 25 * 1000;
 
-async function refresh() {
-  try {
-    const quotes = await yahoo.fetchQuotes(ALL_SYMBOLS);
-    // Attach curated name/sector (Yahoo's payload carries no sector).
-    for (const [sym, q] of Object.entries(quotes)) {
-      if (META[sym]) {
-        q.name   = META[sym].name;
-        q.sector = META[sym].sector;
+function refresh() {
+  // Quotes and indices are requested in parallel by the browser. Reuse one
+  // Yahoo request rather than starting duplicate requests.
+  if (refreshing) return refreshing;
+
+  refreshing = (async () => {
+    try {
+      const quotes = await yahoo.fetchQuotes(ALL_SYMBOLS);
+      for (const [symbol, quote] of Object.entries(quotes)) {
+        if (META[symbol]) {
+          quote.name = META[symbol].name;
+          quote.sector = META[symbol].sector;
+        }
       }
+      cache = quotes;
+      refreshedAt = Date.now();
+      console.log(`[cache] Refreshed ${Object.keys(cache).length} symbols`);
+      if (onRefresh) onRefresh(cache);
+    } catch (err) {
+      console.error('[cache] Refresh failed:', err.message);
+    } finally {
+      refreshing = null;
     }
-    cache = quotes;
-    console.log(`[cache] Refreshed — ${Object.keys(cache).length} symbols`);
-    if (onRefresh) onRefresh(cache);
-  } catch (err) {
-    console.error('[cache] Refresh failed:', err.message);
-  }
-  setTimeout(refresh, REFRESH_MS);
+    return cache;
+  })();
+
+  return refreshing;
 }
 
-function getAll()            { return cache; }
-function getSymbols(symbols) { if (!cache) return null; return Object.fromEntries(symbols.map(s => [s, cache[s]]).filter(([, v]) => v)); }
-function isReady()           { return cache !== null; }
+async function ensureFresh() {
+  if (!cache || Date.now() - refreshedAt >= REFRESH_MS) await refresh();
+  return cache !== null;
+}
 
-// Start the background refresh loop. `cb(cache)` runs after each refresh.
-function init(cb) { onRefresh = cb || null; refresh(); }
+function getAll() { return cache; }
+function getSymbols(symbols) {
+  if (!cache) return null;
+  return Object.fromEntries(symbols.map((symbol) => [symbol, cache[symbol]]).filter(([, quote]) => quote));
+}
+function isReady() { return cache !== null; }
 
-module.exports = { init, getAll, getSymbols, isReady };
+// Used only by the long-running local server for live WebSocket snapshots.
+function init(cb) {
+  onRefresh = cb || null;
+  if (initialized) return;
+  initialized = true;
+  refresh();
+
+  const schedule = () => setTimeout(async () => {
+    await refresh();
+    schedule();
+  }, REFRESH_MS);
+  schedule();
+}
+
+module.exports = { init, getAll, getSymbols, isReady, ensureFresh };

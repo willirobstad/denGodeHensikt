@@ -1,9 +1,9 @@
 const cache = require('../services/quoteCache');
 const { STOCK_SYMBOLS } = require('../config/symbols');
 
-function getQuotes(req, res) {
-  if (!cache.isReady()) {
-    return res.status(503).json({ error: 'Cache warming up, try again in a few seconds' });
+async function getQuotes(req, res) {
+  if (!await cache.ensureFresh()) {
+    return res.status(502).json({ error: 'Could not fetch quote data from Yahoo Finance' });
   }
   res.json(cache.getSymbols(STOCK_SYMBOLS));
 }

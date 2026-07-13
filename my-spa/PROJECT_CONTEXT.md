@@ -35,6 +35,7 @@ Serveren kjører på `PORT` fra miljøvariabler, eller port `3000` som standard.
 | `server/services/yahoo.js` | Yahoo-autentisering og normalisering av Yahoo-svar. |
 | `server/services/quoteCache.js` | Felles kursbuffer som oppdateres hvert 25. sekund. |
 | `server/routes/` og `server/controllers/` | REST-endepunkter for aksjer og indekser. |
+| `api/index.js` og `vercel.json` | Vercel-inngang og ruting for den deployerte SPA-en og API-et. |
 
 ## Hvordan dataflyten fungerer
 
@@ -42,6 +43,8 @@ Serveren kjører på `PORT` fra miljøvariabler, eller port `3000` som standard.
 2. Bufferen oppdateres omtrent hvert 25. sekund. Ved vellykket oppdatering sendes et WebSocket-øyeblikksbilde til alle tilkoblede nettlesere.
 3. Klienten henter også startdata fra REST-API-et, med enkel gjenforsøkslogikk.
 4. `App.js` renderer kurstabell, ticker, indekslinje og topp vinnere/tapere. Senere WebSocket-data oppdaterer samme visning.
+
+På Vercel er det ikke trygt å basere datalasting på en bakgrunnstimer som lever mellom forespørsler. API-kontrollerne venter derfor på en fersk Yahoo-henting ved behov, mens klienten oppdaterer REST-data hvert 30. sekund som reserve for WebSocket-forbindelsen.
 
 ### API-kontrakt
 
