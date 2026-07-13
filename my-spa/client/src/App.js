@@ -294,4 +294,17 @@ export default async function App() {
   }
 
   connectSocket(applySnapshot);
+
+  // Vercel functions may be restarted between requests. Polling keeps prices
+  // current even when a long-lived WebSocket connection is unavailable.
+  setInterval(async () => {
+    const [latestQuotes, latestIndices] = await Promise.allSettled([
+      fetchQuotes(),
+      fetchIndices(),
+    ]);
+    applySnapshot({
+      stocks: latestQuotes.status === 'fulfilled' ? latestQuotes.value : null,
+      indices: latestIndices.status === 'fulfilled' ? latestIndices.value : null,
+    });
+  }, 30_000);
 }

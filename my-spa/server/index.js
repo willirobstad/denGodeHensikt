@@ -1,25 +1,13 @@
 require('dotenv').config();
-const express       = require('express');
 const http          = require('http');
-const path          = require('path');
 const WebSocket     = require('ws');
 const quoteCache    = require('./services/quoteCache');
-const quotesRouter  = require('./routes/quotes');
-const indicesRouter = require('./routes/indices');
 const { STOCK_SYMBOLS, INDEX_SYMBOLS } = require('./config/symbols');
+const { createApp } = require('./app');
 
-const app    = express();
+const app    = createApp();
 const server = http.createServer(app);
 const PORT   = process.env.PORT || 3000;
-
-// --- Static files ---
-app.use(express.static(path.join(__dirname, '../client/public')));
-app.use('/src', express.static(path.join(__dirname, '../client/src')));
-
-// --- REST API ---
-app.use(express.json());
-app.use('/api/quotes',  quotesRouter);
-app.use('/api/indices', indicesRouter);
 
 // --- WebSocket: browser clients ---
 const wss = new WebSocket.Server({ server });

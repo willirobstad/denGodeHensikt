@@ -169,10 +169,46 @@
                   <h2 class="section-title">Medlemmer</h2>
                 </div>
               </div>
-              <p class="page-placeholder">Innhold kommer snart.</p>
+              <div class="members-grid" aria-label="Medlemsoversikt">
+                <button class="member-card" type="button" data-member-dialog="member-1">
+                  <!-- Bytt ut dette feltet med et <img>-element når bilde er klart. -->
+                  <div class="member-photo member-photo-placeholder" aria-hidden="true"><span>Bilde kommer</span></div>
+                  <h3 class="member-name">Medlem 01</h3>
+                  <p class="member-role">Rolle: Under utarbeidelse</p>
+                </button>
+                <button class="member-card" type="button" data-member-dialog="member-2">
+                  <!-- Bytt ut dette feltet med et <img>-element når bilde er klart. -->
+                  <div class="member-photo member-photo-placeholder" aria-hidden="true"><span>Bilde kommer</span></div>
+                  <h3 class="member-name">Medlem 02</h3>
+                  <p class="member-role">Rolle: Under utarbeidelse</p>
+                </button>
+              </div>
             </div>
           </section>
         </div><!-- /page-medlemmer -->
+
+        <!-- Member detail dialogs. Add each member's photo, name and description here. -->
+        <dialog class="member-dialog" id="member-1" aria-labelledby="member-1-name">
+          <div class="member-dialog-inner">
+            <button class="member-dialog-close" type="button" data-member-dialog-close aria-label="Lukk medlemsprofil">&times;</button>
+            <div class="member-detail-photo member-photo-placeholder" aria-hidden="true"><span>Bilde kommer</span></div>
+            <p class="section-eyebrow">Den Gode Hensikt Aksjeklubb</p>
+            <h2 class="member-detail-name" id="member-1-name">Medlem 01</h2>
+            <p class="member-detail-role">Rolle: Under utarbeidelse</p>
+            <p class="member-description">En beskrivende tekst om medlemmet kommer her.</p>
+          </div>
+        </dialog>
+
+        <dialog class="member-dialog" id="member-2" aria-labelledby="member-2-name">
+          <div class="member-dialog-inner">
+            <button class="member-dialog-close" type="button" data-member-dialog-close aria-label="Lukk medlemsprofil">&times;</button>
+            <div class="member-detail-photo member-photo-placeholder" aria-hidden="true"><span>Bilde kommer</span></div>
+            <p class="section-eyebrow">Den Gode Hensikt Aksjeklubb</p>
+            <h2 class="member-detail-name" id="member-2-name">Medlem 02</h2>
+            <p class="member-detail-role">Rolle: Under utarbeidelse</p>
+            <p class="member-description">En beskrivende tekst om medlemmet kommer her.</p>
+          </div>
+        </dialog>
 
         <!-- ═══ Page: Vedtekter ═══ -->
         <div class="page" id="page-vedtekter" data-route="/vedtekter" hidden>
