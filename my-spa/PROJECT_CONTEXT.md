@@ -69,6 +69,8 @@ Ruter styres av hash og defineres i `client/src/services/router.js`:
 
 Sidemenyen kan skjules og valget lagres i nettleserens `localStorage` med nøkkelen `dgha:sidebar-collapsed`.
 
+Medlemskort og detaljvisninger genereres fra `MEMBERS`-listen i `client/src/services/members.js`. Hver oppføring har `id`, `name`, `role`, `image` og `description`; legg nye medlemsbilder i `client/public/images/members/`.
+
 Det visuelle uttrykket er mørkt og finansielt, med gull som aksentfarge. CSS-variabler i starten av `main.css` er riktig sted for gjennomgående designendringer.
 
 ## Viktige hensyn ved videre arbeid
