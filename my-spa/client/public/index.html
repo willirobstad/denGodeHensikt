@@ -27,6 +27,7 @@
         </div>
         <nav class="sidebar-nav">
           <a href="#/"          class="side-link" data-route="/">DGHA</a>
+          <a href="#/portefolje" class="side-link" data-route="/portefolje">Portefølje</a>
           <a href="#/medlemmer" class="side-link" data-route="/medlemmer">Medlemmer</a>
           <a href="#/vedtekter" class="side-link" data-route="/vedtekter">Vedtekter</a>
         </nav>
@@ -160,6 +161,83 @@
         </div><!-- /page-home -->
 
         <!-- ═══ Page: Medlemmer ═══ -->
+        <!-- Page: Portefølje -->
+        <div class="page" id="page-portefolje" data-route="/portefolje" hidden>
+          <section class="section page-section portfolio-page">
+            <div class="section-inner">
+              <div class="section-header portfolio-header">
+                <div>
+                  <p class="section-eyebrow">Det Gode Fond</p>
+                  <h2 class="section-title">Portefølje</h2>
+                  <p class="portfolio-intro">Samlet oversikt over klubbens investeringer og kapitalfordeling.</p>
+                </div>
+                <span class="portfolio-as-of">Sist oppdatert: Ikke registrert</span>
+              </div>
+
+              <div class="portfolio-summary" aria-label="Porteføljesammendrag">
+                <article class="portfolio-stat portfolio-stat-primary">
+                  <span class="portfolio-stat-label">Total verdi</span>
+                  <strong class="portfolio-stat-value">—</strong>
+                  <span class="portfolio-stat-note">NOK</span>
+                </article>
+                <article class="portfolio-stat">
+                  <span class="portfolio-stat-label">Total avkastning</span>
+                  <strong class="portfolio-stat-value">—</strong>
+                  <span class="portfolio-stat-note">Siden oppstart</span>
+                </article>
+                <article class="portfolio-stat">
+                  <span class="portfolio-stat-label">Dagens utvikling</span>
+                  <strong class="portfolio-stat-value">—</strong>
+                  <span class="portfolio-stat-note">Siste handelsdag</span>
+                </article>
+                <article class="portfolio-stat">
+                  <span class="portfolio-stat-label">Beholdninger</span>
+                  <strong class="portfolio-stat-value">0</strong>
+                  <span class="portfolio-stat-note">Aktive posisjoner</span>
+                </article>
+              </div>
+
+              <div class="portfolio-grid">
+                <article class="portfolio-panel allocation-panel">
+                  <div class="portfolio-panel-heading">
+                    <div><p class="section-eyebrow">Eksponering</p><h3>Fordeling</h3></div>
+                  </div>
+                  <div class="allocation-empty" aria-label="Ingen fordelingsdata">
+                    <div class="allocation-ring"><span>0</span><small>poster</small></div>
+                    <p>Fordelingen vises når klubbens beholdninger er registrert.</p>
+                  </div>
+                </article>
+
+                <article class="portfolio-panel portfolio-note-panel">
+                  <div class="portfolio-panel-heading">
+                    <div><p class="section-eyebrow">Investeringsprofil</p><h3>Det Gode Fond</h3></div>
+                  </div>
+                  <p>Porteføljen skal gi De Gode Herrer en tydelig oversikt over fondets posisjoner, utvikling og risikospredning.</p>
+                  <div class="portfolio-principles">
+                    <span>Langsiktig perspektiv</span>
+                    <span>Felles beslutninger</span>
+                    <span>Tydelig risikospredning</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="portfolio-holdings">
+                <div class="portfolio-panel-heading">
+                  <div><p class="section-eyebrow">Posisjoner</p><h3>Beholdninger</h3></div>
+                </div>
+                <div class="market-table-wrap">
+                  <table class="market-table portfolio-table">
+                    <thead><tr><th>Selskap</th><th class="num">Antall</th><th class="num">Snittkurs</th><th class="num">Siste kurs</th><th class="num">Markedsverdi</th><th class="num">Avkastning</th><th class="num">Andel</th></tr></thead>
+                    <tbody>
+                      <tr class="portfolio-empty-row"><td colspan="7"><span class="portfolio-empty-icon">◇</span><strong>Ingen beholdninger registrert</strong><span>Porteføljedata vil vises her når de blir lagt til.</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div><!-- /page-portefolje -->
+
         <div class="page" id="page-medlemmer" data-route="/medlemmer" hidden>
           <section class="section page-section">
             <div class="section-inner">

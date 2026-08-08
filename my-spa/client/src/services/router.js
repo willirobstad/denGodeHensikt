@@ -3,7 +3,7 @@
 // same `data-route`. We show the page matching the current hash and mark the
 // active link. Unknown/empty hashes fall back to the home route ('/').
 
-const ROUTES = ['/', '/medlemmer', '/vedtekter'];
+const ROUTES = ['/', '/portefolje', '/medlemmer', '/vedtekter'];
 
 function currentRoute() {
   const hash = location.hash.replace(/^#/, '');
