@@ -1,0 +1,9 @@
+Communication job: By the end, prospective members should understand the proposed investment club, its social purpose, examples, risks, roles, and launch steps.
+
+Source structure: 12 slides, 960x540, simple-light-2 master, Arial, title/body placeholders, three embedded PNG images. Slides 1 and 8 are section/title slides. Slides 2-7 explain the concept and examples. Slides 9-12 cover practical decisions and next steps.
+
+Formatting direction: preserve all wording, bullets, hyperlinks, and pictures. Improve hierarchy with a restrained navy/teal/gold palette, consistent typography, generous margins, clearer two-column arrangements where images exist, and subtle slide numbering. Existing master/layout links remain intact; edits are slide-local.
+
+Inherited placeholders: title, subtitle/body, and slide-number placeholders. Empty subtitle placeholders on slides 1 and 8 will be deleted. Slide numbers will be intentionally styled or preserved.
+
+Assets: retain image1.png logo on slide 2, image3.png portrait on slide 5, and image2.png portrait on slide 6.

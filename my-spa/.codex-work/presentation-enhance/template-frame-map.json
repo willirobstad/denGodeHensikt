@@ -1,0 +1,17 @@
+{
+  "outputSlides": [
+    {"outputSlide":1,"sourceSlide":1,"narrativeRole":"opening title","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/kvqx0vqd","action":"rewrite-and-reposition"},{"sourceElementId":"sh/lwzy90ry","action":"delete"}]},
+    {"outputSlide":2,"sourceSlide":2,"narrativeRole":"concept overview","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/5kfipszu","action":"rewrite-and-reposition"},{"sourceElementId":"sh/kj6hgny9","action":"rewrite-and-reposition"},{"sourceElementId":"im/ozyh83e1","action":"replace"}]},
+    {"outputSlide":3,"sourceSlide":3,"narrativeRole":"membership rules","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/dgfyls3q","action":"rewrite-and-reposition"},{"sourceElementId":"sh/6xkvytkb","action":"rewrite-and-reposition"}]},
+    {"outputSlide":4,"sourceSlide":4,"narrativeRole":"purpose","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/tcjupg7u","action":"rewrite-and-reposition"},{"sourceElementId":"sh/udcvil8z","action":"rewrite-and-reposition"}]},
+    {"outputSlide":5,"sourceSlide":5,"narrativeRole":"example one","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/je14f2tw","action":"rewrite-and-reposition"},{"sourceElementId":"sh/ruxkz2l0","action":"rewrite-and-reposition"},{"sourceElementId":"im/x0rql4ve","action":"replace"}]},
+    {"outputSlide":6,"sourceSlide":6,"narrativeRole":"example two","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/wfahsbih","action":"rewrite-and-reposition"},{"sourceElementId":"sh/xg3ylgj2","action":"rewrite-and-reposition"},{"sourceElementId":"im/l0v2x8bq","action":"replace"}]},
+    {"outputSlide":7,"sourceSlide":7,"narrativeRole":"product demonstration","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/o7qx47eh","action":"rewrite-and-reposition"},{"sourceElementId":"sh/zixgr2xk","action":"rewrite-and-reposition"}]},
+    {"outputSlide":8,"sourceSlide":8,"narrativeRole":"section divider","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/pozmdgba","action":"rewrite-and-reposition"},{"sourceElementId":"sh/idc76l07","action":"delete"}]},
+    {"outputSlide":9,"sourceSlide":9,"narrativeRole":"risk and proposal","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/vyp8rqt8","action":"rewrite-and-reposition"},{"sourceElementId":"sh/wzyp0vat","action":"rewrite-and-reposition"}]},
+    {"outputSlide":10,"sourceSlide":10,"narrativeRole":"governance roles","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/4zi5ozit","action":"rewrite-and-reposition"},{"sourceElementId":"sh/je9ovuh8","action":"rewrite-and-reposition"}]},
+    {"outputSlide":11,"sourceSlide":11,"narrativeRole":"shared ownership","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/ypcj2p4b","action":"rewrite-and-reposition"},{"sourceElementId":"sh/xo329knq","action":"rewrite-and-reposition"}]},
+    {"outputSlide":12,"sourceSlide":12,"narrativeRole":"next steps","reuseMode":"duplicate-slide","editTargets":[{"sourceElementId":"sh/3qtwfy90","action":"rewrite-and-reposition"},{"sourceElementId":"sh/g3ixkjap","action":"rewrite-and-reposition"}]}
+  ],
+  "omittedSourceSlides": []
+}

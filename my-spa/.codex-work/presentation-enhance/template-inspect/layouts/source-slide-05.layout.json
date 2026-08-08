@@ -1,0 +1,652 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/i107q5of",
+    "id": "i107q5of",
+    "slide": 5,
+    "layoutId": "/ppt/slideLayouts/slideLayout3.xml",
+    "layoutName": "TITLE_AND_BODY",
+    "layoutType": "tx",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "simple-light-2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 960,
+      "height": 540
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Simple Light",
+    "colors": {
+      "accent1": "#4285F4",
+      "accent2": "#212121",
+      "accent3": "#78909C",
+      "accent4": "#FFAB40",
+      "accent5": "#0097A7",
+      "accent6": "#EEFF41",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#595959",
+      "lt2": "#EEEEEE",
+      "hlink": "#0097A7",
+      "folHlink": "#0097A7"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Arial"
+      },
+      "minorFont": {
+        "latinTypeface": "Arial"
+      }
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout3.xml",
+      "name": "TITLE_AND_BODY",
+      "type": "tx",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout3.xml/17",
+          "id": "17",
+          "name": "Google Shape;17;p4",
+          "bbox": [
+            32.72,
+            46.72,
+            894.55,
+            60.13
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout3.xml/18",
+          "id": "18",
+          "name": "Google Shape;18;p4",
+          "bbox": [
+            32.72,
+            120.99,
+            894.55,
+            358.68
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          }
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout3.xml/19",
+          "id": "19",
+          "name": "Google Shape;19;p4",
+          "bbox": [
+            889.5,
+            489.58,
+            57.61,
+            41.32
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "resolvedTextStyle": {
+                "alignment": "right"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›",
+                  "alignment": "right"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "simple-light-2",
+      "type": "master",
+      "backgroundColor": "lt1",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Google Shape;6;p1",
+          "bbox": [
+            32.72,
+            46.72,
+            894.55,
+            60.13
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "lineWidth": 0
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/7",
+          "id": "7",
+          "name": "Google Shape;7;p1",
+          "bbox": [
+            32.72,
+            120.99,
+            894.55,
+            358.68
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "lineWidth": 0
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/8",
+          "id": "8",
+          "name": "Google Shape;8;p1",
+          "bbox": [
+            889.5,
+            489.58,
+            57.61,
+            41.32
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "resolvedTextStyle": {
+                "alignment": "right"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›",
+                  "alignment": "right"
+                }
+              ]
+            }
+          ],
+          "lineWidth": 0
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/je14f2tw",
+      "id": "79",
+      "name": "Google Shape;79;p17",
+      "bbox": [
+        32.72,
+        46.72,
+        894.55,
+        60.13
+      ],
+      "geometry": "rect",
+      "text": "Eksempel 1",
+      "textPreview": "Eksempel 1",
+      "resolvedFontSize": 33.6,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 37.33,
+        "typeface": "Arial",
+        "color": "dk1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 0.9,
+        "insets": {
+          "top": 9.6,
+          "right": 9.6,
+          "bottom": 9.6,
+          "left": 9.6
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Eksempel 1"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Eksempel 1",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Eksempel 1",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ruxkz2l0",
+      "id": "80",
+      "name": "Google Shape;80;p17",
+      "bbox": [
+        32.72,
+        120.99,
+        604.47,
+        399.5
+      ],
+      "geometry": "rect",
+      "text": "Bjørn Willy Robstad\n“Aksjeklubben” opprettet i studietid\nStartinnskudd + månedlige innskudd\nAvkastning brukes til\nGeneralforsamling \nRakfisklag\nSporadiske turer\nPortefølje utelukkende i fond\n“Med alle gutta i samfunnskritiske stillinger finnes det ikke lenger noen aksjer som ikke kan få oss 15 år i buret grunnet innsidehandel (wallah)” (parafrasert)\n“Sosialt hygge er ikke nok til å samle gutta, det må økonomiske insentiver til” (faktisk ikke parafrasert)\n",
+      "textPreview": "Bjørn Willy Robstad | “Aksjeklubben” opprettet i studietid | Startinnskudd + månedlige innskudd | Avkastning brukes til | Generalforsamli...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "dk2",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitLineSpaceReduction": 20000,
+        "insets": {
+          "top": 9.6,
+          "right": 9.6,
+          "bottom": 9.6,
+          "left": 9.6
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 15,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- Bjørn Willy Robstad"
+          },
+          {
+            "index": 2,
+            "text": "- “Aksjeklubben” opprettet i studietid"
+          },
+          {
+            "index": 3,
+            "text": "- Startinnskudd + månedlige innskudd"
+          },
+          {
+            "index": 4,
+            "text": "- Avkastning brukes til"
+          },
+          {
+            "index": 5,
+            "text": "- Generalforsamling"
+          },
+          {
+            "index": 6,
+            "text": "- Rakfisklag"
+          },
+          {
+            "index": 7,
+            "text": "- Sporadiske turer"
+          },
+          {
+            "index": 8,
+            "text": "- Portefølje utelukkende i fond"
+          },
+          {
+            "index": 9,
+            "text": "- “Med alle gutta i samfunnskritiske stillinger finnes det ikke"
+          },
+          {
+            "index": 10,
+            "text": "lenger noen aksjer som ikke kan få oss 15 år i buret"
+          },
+          {
+            "index": 11,
+            "text": "grunnet innsidehandel (wallah)” (parafrasert)"
+          },
+          {
+            "index": 12,
+            "text": "- “Sosialt hygge er ikke nok til å samle gutta, det må"
+          },
+          {
+            "index": 13,
+            "text": "økonomiske insentiver til” (faktisk ikke parafrasert)"
+          },
+          {
+            "index": 14,
+            "text": ""
+          },
+          {
+            "index": 15,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Bjørn Willy Robstad",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Bjørn Willy Robstad",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 2,
+          "text": "“Aksjeklubben” opprettet i studietid",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "“Aksjeklubben” opprettet i studietid",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 3,
+          "text": "Startinnskudd + månedlige innskudd",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Startinnskudd + månedlige innskudd",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 4,
+          "text": "Avkastning brukes til",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Avkastning brukes til",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 5,
+          "text": "Generalforsamling ",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Generalforsamling ",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "○",
+          "marginLeft": 914400,
+          "indent": -317500,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 6,
+          "text": "Rakfisklag",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Rakfisklag",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "○",
+          "marginLeft": 914400,
+          "indent": -317500,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 7,
+          "text": "Sporadiske turer",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Sporadiske turer",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "○",
+          "marginLeft": 914400,
+          "indent": -317500,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 8,
+          "text": "Portefølje utelukkende i fond",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Portefølje utelukkende i fond",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 9,
+          "text": "“Med alle gutta i samfunnskritiske stillinger finnes det ikke lenger noen aksjer som ikke kan få oss 15 år i buret grunnet innsidehandel (wallah)” (parafrasert)",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "“Med alle gutta i samfunnskritiske stillinger finnes det ikke lenger noen aksjer som ikke kan få oss 15 år i buret grunnet innsidehandel (wallah)” (parafrasert)",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "○",
+          "marginLeft": 914400,
+          "indent": -317500,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 10,
+          "text": "“Sosialt hygge er ikke nok til å samle gutta, det må økonomiske insentiver til” (faktisk ikke parafrasert)",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "“Sosialt hygge er ikke nok til å samle gutta, det må økonomiske insentiver til” (faktisk ikke parafrasert)",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "○",
+          "marginLeft": 914400,
+          "indent": -317500,
+          "lineSpacingPercent": 115000
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/x0rql4ve",
+      "id": "81",
+      "name": "Google Shape;81;p17",
+      "bbox": [
+        645.75,
+        120.99,
+        314.25,
+        419.01
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image3.png",
+        "contentType": "image/png",
+        "byteLength": 1360681
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image3.png",
+        "contentType": "image/png",
+        "byteLength": 1360681
+      }
+    }
+  ],
+  "composeRuns": []
+}

@@ -2,9 +2,9 @@
 const MEMBERS = [
   {
     id: 'medlem-01',
-    name: 'Medlem 01',
-    role: 'Under utarbeidelse',
-    image: '/images/members/medlem_bilde_01.jpeg',
+    name: 'William Robstad',
+    role: 'DGH Founding Father',
+    image: '/images/members/medlem_bilde_01.JPEG',
     description: 'En beskrivende tekst om medlemmet kommer her.',
   },
   { id: 'medlem-02', name: 'Medlem 02', role: 'Under utarbeidelse', image: null, description: 'En beskrivende tekst om medlemmet kommer her.' },

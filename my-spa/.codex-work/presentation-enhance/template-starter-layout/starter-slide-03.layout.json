@@ -1,0 +1,583 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/0odgp1",
+    "id": "0odgp1",
+    "slide": 3,
+    "layoutId": "/ppt/slideLayouts/slideLayout3.xml",
+    "layoutName": "TITLE_AND_BODY",
+    "layoutType": "tx",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "masterLayoutName": "simple-light-2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 960,
+      "height": 540
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Simple Light",
+    "colors": {
+      "accent1": "#4285F4",
+      "accent2": "#212121",
+      "accent3": "#78909C",
+      "accent4": "#FFAB40",
+      "accent5": "#0097A7",
+      "accent6": "#EEFF41",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#595959",
+      "lt2": "#EEEEEE",
+      "hlink": "#0097A7",
+      "folHlink": "#0097A7"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Arial"
+      },
+      "minorFont": {
+        "latinTypeface": "Arial"
+      }
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout3.xml",
+      "name": "TITLE_AND_BODY",
+      "type": "tx",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout3.xml/17",
+          "id": "17",
+          "name": "Google Shape;17;p4",
+          "bbox": [
+            32.72,
+            46.72,
+            894.55,
+            60.13
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout3.xml/18",
+          "id": "18",
+          "name": "Google Shape;18;p4",
+          "bbox": [
+            32.72,
+            120.99,
+            894.55,
+            358.68
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          }
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout3.xml/19",
+          "id": "19",
+          "name": "Google Shape;19;p4",
+          "bbox": [
+            889.5,
+            489.58,
+            57.61,
+            41.32
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "resolvedTextStyle": {
+                "alignment": "right"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›",
+                  "alignment": "right"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "simple-light-2",
+      "type": "master",
+      "backgroundColor": "lt1",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Google Shape;6;p1",
+          "bbox": [
+            32.72,
+            46.72,
+            894.55,
+            60.13
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "lineWidth": 0
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/7",
+          "id": "7",
+          "name": "Google Shape;7;p1",
+          "bbox": [
+            32.72,
+            120.99,
+            894.55,
+            358.68
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "lineWidth": 0
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/8",
+          "id": "8",
+          "name": "Google Shape;8;p1",
+          "bbox": [
+            889.5,
+            489.58,
+            57.61,
+            41.32
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle",
+            "wrap": "square",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 9.6,
+              "right": 9.6,
+              "bottom": 9.6,
+              "left": 9.6
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "resolvedTextStyle": {
+                "alignment": "right"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›",
+                  "alignment": "right"
+                }
+              ]
+            }
+          ],
+          "lineWidth": 0
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dwz6lon6",
+      "id": "67",
+      "name": "Google Shape;67;p15",
+      "bbox": [
+        32.72,
+        46.72,
+        894.55,
+        60.13
+      ],
+      "geometry": "rect",
+      "text": "Hvem?",
+      "textPreview": "Hvem?",
+      "resolvedFontSize": 33.6,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 37.33,
+        "typeface": "Arial",
+        "color": "dk1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 0.9,
+        "insets": {
+          "top": 9.6,
+          "right": 9.6,
+          "bottom": 9.6,
+          "left": 9.6
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Hvem?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Hvem?",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Hvem?",
+              "alignment": "left"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/apsnmt4j",
+      "id": "68",
+      "name": "Google Shape;68;p15",
+      "bbox": [
+        32.72,
+        120.99,
+        894.55,
+        358.68
+      ],
+      "geometry": "rect",
+      "text": "SOGBMG\nMedlemskap er høyst frivillig, les vedtekter herunder “Medlemskap”:\nMedlemskap i DGHA krever innbetaling av en gitt sum til foreningens investeringsfond. Summen bestemmes av Hovedstyret (HS) og er lik for alle medlemmer.\nNye medlemmer\nAlle nye medlemmer må ved Generalvorsamlingen stemmes inn, beslutningen krever enstemmighet. Nye medlemmer anses umiddelbart som likeverdige Herrer.\nAvskjeder\nDersom et medlem av DGHA ønsker sitt medlemskap annullert, og er helt sikker i sin sak på dette, skal medlemmets andel av fondet utbetales til medlemmet som avskjediges.\n",
+      "textPreview": "SOGBMG | Medlemskap er høyst frivillig, les vedtekter herunder “Medlemskap”: | Medlemskap i DGHA krever innbetaling av en gitt sum til fo...",
+      "resolvedFontSize": 6,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "dk2",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 0.25,
+        "autoFitLineSpaceReduction": 20000,
+        "insets": {
+          "top": 9.6,
+          "right": 9.6,
+          "bottom": 9.6,
+          "left": 9.6
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 16,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- SOGBMG"
+          },
+          {
+            "index": 2,
+            "text": "- Medlemskap er høyst frivillig, les vedtekter herunder “Medlemskap”:"
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": "Medlemskap i DGHA krever innbetaling av en gitt sum til foreningens investeringsfond. Summen"
+          },
+          {
+            "index": 5,
+            "text": "bestemmes av Hovedstyret (HS) og er lik for alle medlemmer."
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": "Nye medlemmer"
+          },
+          {
+            "index": 8,
+            "text": ""
+          },
+          {
+            "index": 9,
+            "text": "Alle nye medlemmer må ved Generalvorsamlingen stemmes inn, beslutningen krever enstemmighet."
+          },
+          {
+            "index": 10,
+            "text": "Nye medlemmer anses umiddelbart som likeverdige Herrer."
+          },
+          {
+            "index": 11,
+            "text": ""
+          },
+          {
+            "index": 12,
+            "text": "Avskjeder"
+          },
+          {
+            "index": 13,
+            "text": ""
+          },
+          {
+            "index": 14,
+            "text": "Dersom et medlem av DGHA ønsker sitt medlemskap annullert, og er helt sikker i sin sak på dette,"
+          },
+          {
+            "index": 15,
+            "text": "skal medlemmets andel av fondet utbetales til medlemmet som avskjediges."
+          },
+          {
+            "index": 16,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SOGBMG",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SOGBMG",
+              "fontSize": 82.67
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 2,
+          "text": "Medlemskap er høyst frivillig, les vedtekter herunder “Medlemskap”:",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Medlemskap er høyst frivillig, les vedtekter herunder “Medlemskap”:",
+              "fontSize": 82.67
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 3,
+          "text": "Medlemskap i DGHA krever innbetaling av en gitt sum til foreningens investeringsfond. Summen bestemmes av Hovedstyret (HS) og er lik for alle medlemmer.",
+          "lineSpacingPercent": 185000,
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Medlemskap i DGHA krever innbetaling av en gitt sum til foreningens investeringsfond. Summen bestemmes av Hovedstyret (HS) og er lik for alle medlemmer.",
+              "fontSize": 77.8,
+              "color": "dk1"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900
+        },
+        {
+          "index": 4,
+          "text": "Nye medlemmer",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Nye medlemmer",
+              "fontSize": 77.8,
+              "color": "#6B7F99"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 5,
+          "text": "Alle nye medlemmer må ved Generalvorsamlingen stemmes inn, beslutningen krever enstemmighet. Nye medlemmer anses umiddelbart som likeverdige Herrer.",
+          "lineSpacingPercent": 185000,
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Alle nye medlemmer må ved Generalvorsamlingen stemmes inn, beslutningen krever enstemmighet. Nye medlemmer anses umiddelbart som likeverdige Herrer.",
+              "fontSize": 77.8,
+              "color": "dk1"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900
+        },
+        {
+          "index": 6,
+          "text": "Avskjeder",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Avskjeder",
+              "fontSize": 77.8,
+              "color": "#6B7F99"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900,
+          "lineSpacingPercent": 115000
+        },
+        {
+          "index": 7,
+          "text": "Dersom et medlem av DGHA ønsker sitt medlemskap annullert, og er helt sikker i sin sak på dette, skal medlemmets andel av fondet utbetales til medlemmet som avskjediges.",
+          "lineSpacingPercent": 185000,
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dersom et medlem av DGHA ønsker sitt medlemskap annullert, og er helt sikker i sin sak på dette, skal medlemmets andel av fondet utbetales til medlemmet som avskjediges.",
+              "fontSize": 77.8,
+              "color": "dk1"
+            }
+          ],
+          "bulletCharacter": "●",
+          "marginLeft": 457200,
+          "indent": -342900
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}
